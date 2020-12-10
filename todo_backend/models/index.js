@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const db = require('./models/');
 
 mongoose.connect('mongodb://localhost/todo-app', {
     keepAlive: true,
@@ -11,3 +12,5 @@ mongoose.set('debug', true)
 mongoose.Promise = Promise
 
 
+//Using the model "Todo"
+module.exports.Todo = require('./todo')
